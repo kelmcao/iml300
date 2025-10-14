@@ -1,16 +1,52 @@
 body {
-  background-image: url("assets/athens.png");
-  background-size: cover;
-  
-  height: 100vx;
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 50px;
-  color: wheat;
+  color: whitesmoke;
   font-family: "Lucida Console", "Courier New", monospace;
   
 }
 
-img {
+.index-bg {
+    background-color: black;
+    background-size: cover;
+}
+
+.university-bg {
+    background-image: url('assets/protest1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fire-bg {
+    background-image: url('assets/fire.webp');
+    background-color: #e0e0e0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.arrest-bg {
+    background-image: url('assets/arrest1.jpg');
+    background-color: #e0e0e0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.info-bg {
+    background-image: url('assets/30sept.jpg');
+    filter: brightness(60%);
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* img {
   position: absolute; left: 400px; top: 100px;
   height: 575px;
   border-radius: 20px;
@@ -18,14 +54,12 @@ img {
   margin: 50px, 800px;
   transition: 1s;
   filter: blur(5px);
-  /*      border: 3px solid blue; */
 }
 
 img:hover {
   height: 650px;
   filter: blur(0px);
-    /*   border: 1px solid red; */
-}
+} */
 
 #p1:hover {
   /*   transform: rotate(5deg); */
@@ -36,6 +70,11 @@ img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+a, u {
+    color:#fff36d;
+  text-decoration: none;
 }
 
 h1{

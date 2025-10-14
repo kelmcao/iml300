@@ -1,0 +1,10 @@
+a {
+  color: aqua;
+  background: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background: red;
+}

@@ -1,0 +1,69 @@
+body {
+  background-image: url("assets/athens.png");
+  background-size: cover;
+  
+  height: 100vx;
+  text-align: center;
+  padding: 50px;
+  color: wheat;
+  font-family: "Lucida Console", "Courier New", monospace;
+  
+}
+
+img {
+  position: absolute; left: 400px; top: 100px;
+  height: 575px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 50px, 800px;
+  transition: 1s;
+  filter: blur(5px);
+  /*      border: 3px solid blue; */
+}
+
+img:hover {
+  height: 650px;
+  filter: blur(0px);
+    /*   border: 1px solid red; */
+}
+
+#p1:hover {
+  /*   transform: rotate(5deg); */
+  letter-spacing: 0.5em;
+}
+
+.specialCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 60px; 
+}
+
+p{
+  line-height: 1.5;
+}
+
+#p1 {
+  font-size: 16px; 
+}
+
+#p2{
+  font-size: 25px;
+}
+
+/*
+@keyframes coolAnimation {
+  0% {
+    color: red;
+  }
+  50% {
+    color: green;
+  }
+  100% {
+    color: blue;
+  }
+}
+  */
