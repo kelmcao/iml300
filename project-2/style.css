@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: whitesmoke;
+  color: rgb(162, 0, 0);
   font-family: "Lucida Console", "Courier New", monospace;
   
 }
@@ -64,7 +64,6 @@ img {
 
 .info-img {
     position:absolute;
-    opacity: 0.5;
     z-index: -1;
     border-radius: 20px;
     filter: blur(3px);
