@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: rgb(162, 0, 0);
+  color: #fff36d;
   font-family: "Lucida Console", "Courier New", monospace;
   
 }
@@ -91,7 +91,7 @@ img {
 
 a, u {
     line-height: 1.5;
-    color:#fff36d;
+    color:#ff5656;
     text-decoration: none;
 }
 
