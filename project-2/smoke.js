@@ -5,7 +5,7 @@ let zooming = false;
 
 let newText = "\"Those scum...as if it wasn't enough for them to kill our generals, they're doing this. They're destroying our country.\" A voice mumbles, disgruntled.";
 
-let textOpacity = 0; // start fully transparent
+let textOpacity = 0;
 let textElement;
 
 function preload() {
@@ -21,16 +21,14 @@ function setup() {
   textElement = document.getElementById("sceneText");
 
   document.getElementById("pki").addEventListener("click", () => {
-    targetZoom = 2.5; // zoom factor
+    targetZoom = 2.5;
     zooming = true;
-    textOpacity = 0;  // reset opacity
+    textOpacity = 0;
   });
 }
 
 function draw() {
   background(0);
-
-  // Zoom animation
   if (zooming) {
     zoom = lerp(zoom, targetZoom, 0.05);
     if (abs(zoom - targetZoom) < 0.01) {
@@ -38,9 +36,8 @@ function draw() {
     }
   }
 
-  // Draw background zoomed to left side
   imageMode(CENTER);
-  let focusX = width * 0.25; // 25% from left
+  let focusX = width * 0.25;
   let focusY = height / 2;
   translate(focusX, focusY);
   scale(zoom);
