@@ -138,3 +138,7 @@ img {
 #p1:hover {
   letter-spacing: 0.5em;
 }
+
+#sceneText {
+  transition: opacity 0.05s linear; /* small transition for smoother fade */
+}

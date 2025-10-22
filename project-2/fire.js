@@ -2,7 +2,7 @@ let fireSound;
 let hasStarted = false;
 
 function preload() {
-  fireSound = loadSound("audio\fire-1.mp3");
+  fireSound = loadSound("audio/fire-1.mp3");
 }
 
 function setup() {
@@ -14,12 +14,6 @@ function mousePressed() {
   if (!hasStarted) {
     hasStarted = true;
     fireSound.play();
-    // userStartAudio().then(() => {
-    //   fireSound.setVolume(0);
-    //   fireSound.loop();
-    //   fadeInSound(3);
-    //   console.log("Audio started!");
-    // }).catch(err => console.error("Playback blocked:", err));
   }
 }
 
