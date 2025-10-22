@@ -99,10 +99,11 @@ u {
   line-height: 1.5;
   color: #ff5656;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-.a:hover{
-  transform: scale(1.5);
+a:hover{
+  transform: scale(1.2);
 }
 
 #p1 {
@@ -146,3 +147,15 @@ img {
 #sceneText {
   transition: opacity 0.05s linear; /* small transition for smoother fade */
 }
+
+#pki {
+  cursor: pointer;
+  color: #ff5656;
+  text-decoration: underline;
+  transition: transform 0.3s ease;
+}
+
+#pki:hover {
+  transform: scale(1.3);
+}
+

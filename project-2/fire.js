@@ -8,8 +8,7 @@ function preload() {
 function setup() {
   createCanvas(1, 1).hide();
   console.log("Sketch loaded. Click anywhere to start audio.");
-  fireSound.setVolume(0);
-  fadeInSound(3);
+  fireSound.play();
 }
 
 // function mousePressed() {
