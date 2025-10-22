@@ -3,7 +3,7 @@ let zoom = 1;
 let targetZoom = 1;
 let zooming = false;
 
-let newText = "This isn't the first time this has happened.";
+let newText = ""Those scum...as if it wasn't enough for them to kill our generals, they're doing this. They're destroying our country."";
 
 let textOpacity = 0; // start fully transparent
 let textElement;

@@ -101,6 +101,10 @@ u {
   text-decoration: none;
 }
 
+.a:hover{
+  transform: scale(1.5);
+}
+
 #p1 {
   font-size: 16px;
 }
