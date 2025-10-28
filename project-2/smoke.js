@@ -1,53 +1,68 @@
 let bg;
 let zoom = 1;
 let targetZoom = 1;
-let zooming = false;
-
-let newText = "\"Those scum...as if it wasn't enough for them to kill our generals, they're doing this. They're destroying our country.\" A voice mumbles, disgruntled.";
-
+let panX = 0;
+let panY = 0;
+let targetX = 0;
+let targetY = 0;
 let textOpacity = 0;
-let textElement;
+let visible = false;
 
 function preload() {
-  bg = loadImage('assets/smokebali.jpg');
+  bg = loadImage('https://static01.nyt.com/images/2015/11/07/world/INDONESIA1/INDONESIA1-superJumbo.jpg');
 }
 
 function setup() {
-  let c = createCanvas(windowWidth, windowHeight);
-  c.position(0, 0);
-  c.style('z-index', '-1');
-  c.style('position', 'fixed');
+  createCanvas(windowWidth, windowHeight)
+    .position(0, 0)
+    .style('z-index', '-1')
+    .style('position', 'fixed');
 
-  textElement = document.getElementById("sceneText");
+  select('#pki').mousePressed(() => {
+    targetZoom = 3;
+    targetX = width * 1;
+    targetY = width * -0.32;
 
-  document.getElementById("pki").addEventListener("click", () => {
-    targetZoom = 2.5;
-    zooming = true;
-    textOpacity = 0;
+
+    select('#link')
+      .attribute('href', 'fire.html')
+      .html('Investigate further');
+
+    visible = true; // allow it to fade in
   });
+
+  // Make sure the canvas doesn't block clicks
+  select('canvas').style('pointer-events', 'none');
 }
 
 function draw() {
   background(0);
-  if (zooming) {
-    zoom = lerp(zoom, targetZoom, 0.05);
-    if (abs(zoom - targetZoom) < 0.01) {
-      zooming = false;
-    }
+
+  // Smooth zoom and pan
+  zoom = lerp(zoom, targetZoom, 0.05);
+  panX = lerp(panX, targetX, 0.05);
+  panY = lerp(panY, targetY, 0.05);
+
+  push();
+  imageMode(CENTER);
+  translate(width / 2 + panX, height / 2 + panY);
+  scale(zoom);
+  tint(100);
+  image(bg, 0, 0, width, height);
+  pop();
+
+  // Fade in the text after zoom
+  if (zoom > 1.05) {
+    textOpacity = min(textOpacity + 0.02, 1);
+    select('#sceneText')
+      .style('opacity', textOpacity)
+      .html('"Those scum...as if it wasn\'t enough for them to kill our generals, they\'re doing this. They\'re destroying our country." A voice mumbles, disgruntled.');
   }
 
-  imageMode(CENTER);
-  let focusX = width * 0.25;
-  let focusY = height / 2;
-  translate(focusX, focusY);
-  scale(zoom);
-  image(bg, 0, 0, width, height);
-
-  if (zoom > 1.05) {
-    textOpacity += 0.02;
-    textOpacity = constrain(textOpacity, 0, 1);
-    textElement.style.opacity = textOpacity;
-    textElement.innerHTML = newText;
+  // Fade in the link if PKI clicked
+  if (visible) {
+    select('#link')
+      .style('opacity', textOpacity);
   }
 }
 
