@@ -1,23 +1,21 @@
+/* === Base layout === */
 body {
   min-height: 100vh;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0;
   color: #fff36d;
   font-family: "Lucida Console", "Courier New", monospace;
-  position: relative;
   overflow-x: hidden;
+  background-color: black;
 }
 
+/* === Image backgrounds === */
 .image-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
 }
@@ -26,7 +24,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: blur(5px) opacity(50%);
+  filter: blur(5px) opacity(0.5);
   transition: filter 0.8s ease;
   pointer-events: auto;
 }
@@ -35,11 +33,8 @@ body {
   filter: blur(0);
 }
 
-.index-bg {
-  background-color: black;
-  background-size: cover;
-}
-
+/* === Background variants === */
+.index-bg,
 .university-bg,
 .fire-bg,
 .smoke-bg,
@@ -47,35 +42,42 @@ body {
 .info-bg {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
 }
 
 .university-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/protest1.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/protest1.webp");
 }
 
 .fire-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/fire.webp");
-  background-color: #e0e0e0;
-}
-
-.smoke-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/smokebali.jpg");
-  background-color: #e0e0e0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/fire.webp");
 }
 
 .arrest-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/arrest1.jpg");
-  background-color: #e0e0e0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/arrest1.jpg");
 }
 
 .info-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("assets/30sept.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("assets/30sept.jpg");
+}
+
+.ending1-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/car.webp");
+}
+
+/* === Typography === */
+h1, h2 {
+  margin: 0;
+  text-align: center;
 }
 
 h1 {
-  font-size: 60px;
-  text-align: center;
+  font-size: 30vw;
 }
 
 .content,
@@ -84,69 +86,46 @@ h1 {
   z-index: 1;
   width: 60vw;
   line-height: 1.6;
+  padding: 10px 20px;
 }
 
-.content {
-  padding: 20px;
-}
-
-.paragraph {
-  padding: 10px;
-}
-
-a,
-u {
-  line-height: 1.5;
+/* === Links === */
+a, u {
   color: #ff5656;
   text-decoration: none;
   transition: transform 0.3s ease;
+  line-height: 400%;
 }
 
-a:hover{
+a:hover,
+#pki:hover {
   transform: scale(1.2);
+  color: #fff36d;
 }
 
-#p1 {
-  font-size: 16px;
-}
+/* === Text sizes === */
+#p1 { font-size: 16px; }
+#p2 { font-size: 25px; }
 
-#p2 {
-  font-size: 25px;
-}
-
+/* === Images === */
 img {
   height: 300px;
-  transition: 1s;
   filter: blur(5px);
+  transition: 1s;
 }
 
-.img1 {
+.img1, .img2, .img3 {
   position: absolute;
-  top: 100px;
-  left: 10%;
-  width: 400px;
 }
 
-.img2 {
-  top: 900px;
-  right: 15%;
-  width: 500px;
-}
+.img1 { top: 100px; left: 10%; width: 400px; }
+.img2 { top: 900px; right: 15%; width: 500px; }
+.img3 { top: 1700px; left: 50%; transform: translateX(-50%); width: 600px; }
 
-.img3 {
-  top: 1700px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-}
+/* === Interactions === */
+#p1:hover { letter-spacing: 0.5em; }
 
-#p1:hover {
-  letter-spacing: 0.5em;
-}
-
-#sceneText {
-  transition: opacity 0.05s linear; /* small transition for smoother fade */
-}
+#sceneText { transition: opacity 0.05s linear; }
 
 #pki {
   cursor: pointer;
@@ -155,7 +134,4 @@ img {
   transition: transform 0.3s ease;
 }
 
-#pki:hover {
-  transform: scale(1.3);
-}
-
+#pki:hover { transform: scale(1.3); }

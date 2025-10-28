@@ -8,18 +8,15 @@ function preload() {
 function setup() {
   createCanvas(1, 1).hide();
   console.log("Sketch loaded. Click anywhere to start audio.");
-
-  // p5.js helper to enable audio context
   userStartAudio();
+}
 
-  // Play audio on first user gesture
-  mousePressed(() => {
-    if (!hasStarted) {
-      fireSound.play();
-      fadeInSound(2); // optional fade-in duration in seconds
-      hasStarted = true;
-    }
-  });
+function mousePressed() {
+  if (!hasStarted) {
+    fireSound.loop();
+    fadeInSound(2);
+    hasStarted = true;
+  }
 }
 
 function fadeInSound(duration) {
@@ -29,5 +26,5 @@ function fadeInSound(duration) {
     currentVol += step;
     fireSound.setVolume(constrain(currentVol, 0, 1));
     if (currentVol >= 1) clearInterval(interval);
-  }, duration * 1000 * step);
+  }, (duration * 1000 * step));
 }
