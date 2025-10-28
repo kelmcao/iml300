@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML demo</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-    <script src="arrest.js"></script>
 
-  </head>
-  <body class="arrest-bg">
-    <div class = "paragraph">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script src="arrest.js"></script>
+  <style>
+    audio::-webkit-media-controls {
+      display: none;
+    }
+  </style>
+  <audio controls autoplay loop>
+    <source src="audio/protest.mp3">
+  </audio>
+</head>
+
+<body class="arrest-bg">
+  <div class="paragraph">
     <p>The man is your major advisor, and one of the kindest professors at the school.
-      He holds his head in his hands in distress, body writhing and struggling. His face is contorted in pain, palms shielding his shut eyes. The soldiers spot you, and you...</p>
-    </div>
-    <a href="ending1.html"> Respond "Wait-he hasn't done anything wrong! What are you doing?" </a>
-    <a href="ending2.html"> You silently watch him pass by.</a>
-  </body>
+      He holds his head in his hands in distress, body writhing and struggling. His face is contorted in pain, palms
+      shielding his shut eyes. The soldiers spot you, and you...</p>
+  </div>
+  <a href="javascript:void(0)">silently watch him pass by.</a>
+  <a class="censor" href="javascript:void(0)"> respond "Wait-he hasn't done anything wrong! What are you doing?" </a>
+</body>
+
 </html>

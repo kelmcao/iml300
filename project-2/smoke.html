@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML demo</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-    <script src="smoke.js"></script>
-  </head>
-    <body class="smoke-bg">
-    <div class="paragraph">
-      <p id="sceneText">
-        While walking to school, you come across a commotion at your neighbor's house.
-        The home looks raided, its door hanging loosely by a hinge. Papers are strewn on the ground, trampled and torn up.
-        The area's mostly empty save for a few people who toss water
-        onto the enflamed area. You're not sure what caused the fire. <br><br>
-        On the wall, you can see scratch marks, letters spelling out 
-        <span id="pki">PKI</span>.
-      </p>
-    </div>
-    <a id="link" href="university.html">Ignore and continue to school.</a>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script src="smoke.js"></script>
+  <style>
+    audio::-webkit-media-controls {
+      display: none;
+    }
+  </style>
+  <audio controls autoplay loop>
+    <source src="audio/smoke.mp3">
+  </audio>
+</head>
+
+<body class="smoke-bg">
+  <div class="paragraph">
+    <p>
+      While walking to school, you come across a commotion at your neighbor's house.
+      The home looks raided, its door hanging loosely by a hinge. Papers are strewn on the ground, trampled and torn up.
+      The area's mostly empty save for a few people who toss water
+      onto a pile of ash, fumes of smoke still rising. You're not sure what caused the fire. <br><br>
+      On the wall, you can see scratch marks, letters spelling out <a id="pki" class="censor" href="javascript: void(0)">PKI</a>
+    </p>
+  </div>
+  <a id="link" href="university.html">-stop looking. Continue to school.</a>
+</body>
+
 </html>

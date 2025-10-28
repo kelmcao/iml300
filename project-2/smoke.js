@@ -26,19 +26,18 @@ function setup() {
 
     select('#link')
       .attribute('href', 'fire.html')
+      .toggleClass('censor')
       .html('Investigate further');
 
-    visible = true; // allow it to fade in
+    visible = true;
   });
 
-  // Make sure the canvas doesn't block clicks
   select('canvas').style('pointer-events', 'none');
 }
 
 function draw() {
   background(0);
 
-  // Smooth zoom and pan
   zoom = lerp(zoom, targetZoom, 0.05);
   panX = lerp(panX, targetX, 0.05);
   panY = lerp(panY, targetY, 0.05);
@@ -47,19 +46,17 @@ function draw() {
   imageMode(CENTER);
   translate(width / 2 + panX, height / 2 + panY);
   scale(zoom);
-  tint(100);
+  tint(150);
   image(bg, 0, 0, width, height);
   pop();
 
-  // Fade in the text after zoom
   if (zoom > 1.05) {
     textOpacity = min(textOpacity + 0.02, 1);
-    select('#sceneText')
+    select('.paragraph p')
       .style('opacity', textOpacity)
       .html('"Those scum...as if it wasn\'t enough for them to kill our generals, they\'re doing this. They\'re destroying our country." A voice mumbles, disgruntled.');
   }
 
-  // Fade in the link if PKI clicked
   if (visible) {
     select('#link')
       .style('opacity', textOpacity);

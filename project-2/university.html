@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML demo</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="university-bg">
-    <div class = "paragraph">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    audio::-webkit-media-controls {
+      display: none;
+    }
+  </style>
+  <audio controls autoplay loop>
+    <source src="audio/protest">
+  </audio>
+</head>
+
+<body class="university-bg">
+  <div class="paragraph">
     <p>
-      When you arrive at school, the situation isn't much better. A crowd of student rioters has formed, some stoning the windows, holding chairs, pipes, and other common tools.
-      They demand the expulsion of the PKI, and you watch as a teacher is pushed outside by soldiers, bruised and beaten. The students leap on her, demanding to be repaid for the
-      deaths of the six generals committed by her party. Not far, you spy a soldier watching them, occasionally whispering directions to students.
-      Out of the corner of your eye, you spot a man being pulled out of an alleyway by a few soldiers. He seems resistant, and you want to 
-      <a href="arrest.html">see what is happening.</a>
+      When you arrive at school, the situation is no better. A crowd of student rioters has formed, some stoning
+      the windows, holding chairs, pipes, and other common tools.<br><br>
+      They demand the expulsion of the PKI, and you watch as a teacher is pushed outside by soldiers, bruised and
+      beaten. The students leap on her, demanding to be repaid for the
+      deaths of the six generals committed by her party. Not far, you spy a soldier watching them, occasionally
+      whispering directions to students.<br><br>
+      Out of the corner of your eye, you spot a familiar face being pulled out of an alleyway by a few soldiers. He seems
+      resistant, and you want to
+      <a class="censor" href="arrest.html">see what's happening.</a>
     </p>
-    </div>
-  </body>
+  </div>
+  <a href="ending2.html">ignore the situation. Keep your head down.</a>
+</body>
+
 </html>
