@@ -92,7 +92,6 @@ body {
 
 }
 
-/* === Typography === */
 h1,
 h2 {
   margin: 0px;
@@ -211,4 +210,17 @@ p {
   left: 50%;
   transform: translateX(-50%);
   width: 600px;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 1s ease;
 }

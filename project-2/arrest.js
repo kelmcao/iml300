@@ -4,17 +4,15 @@ function setup() {
     noCanvas();
 
     paragraph = select('.paragraph p');
-
-    // Find and attach handlers to both initial links
-    selectAll('a').forEach(link => {
+    selectAll('a').forEach(function(link) {
         if (link.html().includes("silently watch him pass by")) {
-            link.mousePressed((event) => {
+            link.mousePressed(function(event) {
                 event.preventDefault();
                 updateTextFirst();
             });
         }
         if (link.html().includes("Wait-he hasn't done anything wrong")) {
-            link.mousePressed((event) => {
+            link.mousePressed(function(event) {
                 event.preventDefault();
                 updateTextSecond();
             });
@@ -24,10 +22,10 @@ function setup() {
     audio.volume(0.5);
 }
 
-
-
 function updateTextFirst() {
-    selectAll('a').forEach(link => link.remove());
+    selectAll('a').forEach(function(link) {
+        link.remove();
+    });
 
     paragraph.html(`
     <span id="fade" style="opacity:0; transition:opacity 1s;">
@@ -36,11 +34,15 @@ function updateTextFirst() {
     </span>
   `);
 
-    setTimeout(() => select('#fade').style('opacity', 1), 10);
+    setTimeout(function() {
+        select('#fade').style('opacity', 1);
+    }, 10);
 }
 
 function updateTextSecond() {
-    selectAll('a').forEach(link => link.remove());
+    selectAll('a').forEach(function(link) {
+        link.remove();
+    });
 
     paragraph.html(`
     <span id="fade2" style="opacity:0; transition:opacity 1s;">
@@ -52,5 +54,7 @@ function updateTextSecond() {
     </span>
   `);
 
-    setTimeout(() => select('#fade2').style('opacity', 1), 10);
+    setTimeout(function() {
+        select('#fade2').style('opacity', 1);
+    }, 10);
 }
