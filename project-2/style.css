@@ -77,7 +77,8 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 30vw;
+  font-size: 400px;
+  line-height: 350px;
 }
 
 .content,
