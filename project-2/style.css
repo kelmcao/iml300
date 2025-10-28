@@ -158,7 +158,7 @@ a{
   filter: blur(2px);
 }
 
-.arrowImg:hover  img{
+.arrowImg:hover img{
   filter: none;
 }
 
@@ -167,6 +167,10 @@ a:hover {
   color: #ff5656;
   background: none;
   border: 0px
+}
+
+a:not(.censor):hover {
+  background-color: #ffe342;
 }
 
 .index-text:hover {

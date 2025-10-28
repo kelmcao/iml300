@@ -19,7 +19,7 @@ function setup() {
         }
     });
     let audio = select('audio');
-    audio.volume(0.5);
+    audio.volume(0.4);
 }
 
 function updateTextFirst() {
