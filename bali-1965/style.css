@@ -169,10 +169,10 @@ a:hover {
   background: none;
   border: 0px
 }
-
+/* 
 a:not(.censor):not(.arrowImg):hover {
   background-color: #ffe342;
-}
+} */
 
 .index-text:hover {
   color: black;
