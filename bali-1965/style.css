@@ -160,6 +160,7 @@ a{
 
 .arrowImg:hover img{
   filter: none;
+  color: none;
 }
 
 a:hover {
@@ -169,7 +170,7 @@ a:hover {
   border: 0px
 }
 
-a:not(.censor):hover {
+a:not(.censor):not(.arrowImg):hover {
   background-color: #ffe342;
 }
 
