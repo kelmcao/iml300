@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#block").click(function () {
+  $(".block").click(function () {
     $(this).toggleClass("text-block");
   });
 });
