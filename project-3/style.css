@@ -9,3 +9,14 @@
     fill: black;
 }
 
+.content {
+    position: relative;
+    width: 60vw;
+    line-height: 1.6;
+    width: 30em;
+    padding: 10px 20px;
+}
+
+.text-block{
+    background-color: black;
+}
