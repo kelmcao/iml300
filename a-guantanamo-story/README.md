@@ -1,5 +1,5 @@
     ABOUT THIS PROJECT
-    Kelly Cao
+    Created by Kelly Cao
     
     I wanted to create a project building upon the narrative work I had begun doing in Project 2, and combine it with a historical site that
 still carries a lot of pertinence nowadays. I first learned about Guantanamo Bay last year in my surveillance class, and since then I've been deeply interested 
