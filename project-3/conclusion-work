@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="formatted-text">
+        <p>
+            You've been taken to a facility somewhere in the Americas, is all you know.
+            One day passes, you think it's a nightmare.
+            A week passes, and the harsh reality starts to settle in.
+            You get interrogated, but when you disagree, they only continue.
+            <span style="font-size: 30px;">Weeks continue to fly by,   one   after the   other   , turning into
+                months.</span>
+            <span style="font-size: 50px;">Months turn into a year. Your life falls into a monotony, </span>
+            <span style="font-size: 70px;">It's been five years since you've seen your loved ones.
+                You wonder if you'll be here
+                forever.
+            </span>
+        </p>
+    </div>
+    <div class="links-container">
+        <a href="history.html">This is only one possible story.</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!-- page for timeline with dropdowns -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="timeline.js"></script>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body class="timeline-page">
+    <div class="timeline-header">
+        <h1>Timeline</h1>
+        <p style="font-style: italic; padding-left: 30px;">Click any event to learn more</p>
+    </div>
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-item" data-popup="first">
+                <p>1903</p>
+            </div>
+
+            <div class="timeline-item" data-popup="second">
+                <p>1970s-2001</p>
+            </div>
+
+            <div class="timeline-item" data-popup="third">
+                <p>2002</p>
+            </div>
+
+            <div class="timeline-item" data-popup="fourth">
+                <p>2004-2008</p>
+            </div>
+
+            <div class="timeline-item" data-popup="fifth">
+                <p>2009-2016</p>
+            </div>
+
+            <div class="timeline-item" data-popup="sixth">
+                <p>2025</p>
+            </div>
+        </div>
+
+        <div class="popup-overlay" data-popup-id="first"></div>
+        <div class="popup" data-popup-id="first">
+            <button class="close">&times</button>
+            <h2 style="text-align: center;">1903</h2>
+            <div class="popup-img">
+                <img src="https://www.paulkrameronline.com/wp-content/uploads/2015/01/npr-gitmo-image.jpg" alt="Guantanamo Bay in 1903">
+            </div>
+            <p class="subtitle">Old photograph of Guantánamo Bay taken from <a class="subtitle" href="https://www.paulkrameronline.com/Guantanamo-bay-a-sticking-point-between-u-s-cuba-since-1903/">Vanderbilt Prof. Paul Kramer's website.</a><br><br></p>
+            <p>The United States obtains a perpetual lease on Guantánamo Bay after the Spanish–American War, creating a long-term military foothold in Cuba. The base later becomes a strategic and legal gray zone for detention practices. Its isolated location and ambiguous sovereignty enable U.S. authorities to operate outside normal judicial oversight. This sets the stage for future human-rights controversies.</p>
+        </div>    
+
+        <div class="popup-overlay" data-popup-id="second"></div>
+        <div class="popup" data-popup-id="second">
+            <button class="close">&times</button>
+            <h2 style="text-align: center;">1970s–2001</h2>
+            <div class="popup-img">
+                <img src="https://blog.gitmomemory.org/files/2013/03/Merrill-Smith-protest-4.png" alt="Haitian refugees protesting at Guantánamo Bay in 1993">
+            </div>
+            <p class="subtitle">Photo of Haitian refugees protesting at Guantánamo Bay in 1993. Taken from <a class="subtitle" href="https://blog.gitmomemory.org/2013/07/16/excavating-stories-from-gtmos-haitian-refugee-camps/">Guantánamo Public Memory Project.</a><br><br></p>
+            <p>Before it held terrorism suspects, the base was used to detain Haitian and Cuban migrants interdicted at sea. Many sought asylum, but conditions were harsh, medical care was limited, and legal access was restricted. Detainees were often held in overcrowded camps and pressured or processed for repatriation rather than asylum. These early practices foreshadowed the human-rights issues that would define Guantánamo.</p>
+        </div>
+
+        <div class="popup-overlay" data-popup-id="third"></div>
+        <div class="popup" data-popup-id="third">
+            <button class="close">&times</button>
+            <h2 style="text-align: center;">2002</h2>
+            <div class="popup-img">
+                <img src="https://static01.nyt.com/images/2022/01/11/us/politics/11dc-gitmo-2/merlin_185205891_250048c9-5a6e-4849-80d9-b2ba7580a860-mediumSquareAt3X.jpg" alt="Infamous photo depicting U.S.'s post 9/11 detention policy with men on knees.">
+            </div>
+            <p class="subtitle">Photo of prisoners at Guantánamo Bay taken in 2002 depicting harsh conditions, from <a class="subtitle" href="https://www.nytimes.com/2022/01/10/us/politics/guantanamo-photos-prisoners.html/">"The New York Times".</a><br><br></p>
+            <p>The U.S. begins holding suspected terrorists at Guantánamo as “enemy combatants,” outside traditional criminal law protections. Reports of torture, forced interrogation, and indefinite detention without trial quickly emerge. The facility becomes globally infamous as a symbol of human-rights violations. Its legal isolation allows the U.S. government to avoid due-process requirements applied on U.S. soil.</p>
+        </div>
+
+        <div class="popup-overlay" data-popup-id="fourth"></div>
+        <div class="popup" data-popup-id="fourth">
+            <button class="close">&times</button>
+            <h2 style="text-align: center;">2004–2008</h2>
+            <div class="popup-img">
+                <img style="height: 200px;"src="https://www.andyworthington.co.uk/wp-content/uploads/guantanamosupremecourtjan081.jpg" alt="Photo of protestors at the Supreme Court on the 5th anniversary of the prison's opening, 2005.">
+            </div>
+            <p class="subtitle">Photo of protestors at the Supreme Court on the 5th anniversary of the prison's opening, 2007. Taken from <a class="subtitle" href="https://www.andyworthington.co.uk/2011/11/29/as-judges-kill-off-habeas-corpus-for-the-guantanamo-prisoners-will-the-supreme-court-act/">investigative journalist and historian Andy Worthington's website.</a><br><br></p>
+            <p>Between 2004 and 2008, a series of landmark Supreme Court cases reshaped Guantánamo’s legal landscape. In Rasul v. Bush (2004), the Court ruled that detainees could challenge their detention in U.S. federal courts, rejecting the government’s claim that Guantánamo lay outside judicial reach. The Bush administration responded by creating military tribunals, but the Court struck them down in Hamdan v. Rumsfeld (2006), declaring the system unconstitutional and in violation of the Geneva Conventions. Congress then passed the Military Commissions Act (2006) to limit detainees’ rights, but the Court again pushed back in Boumediene v. Bush (2008), affirming detainees’ constitutional right to habeas corpus and exposing systemic abuses and legal evasions.</p>
+        </div>
+
+        <div class="popup-overlay" data-popup-id="fifth"></div>
+        <div class="popup" data-popup-id="fifth">
+            <button class="close">&times</button>
+            <h2 style="text-align: center;">2009–2016</h2>
+             <div class="popup-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD6L6l8m29-jdx54JiVRvBhNXZ4OOkw360MQ&s" alt="Obama signing directive to close Guantanamo Bay, 2009.">
+            </div>
+            <p class="subtitle">Photo of Obama signing a directive to shut down Guantánamo Bay in 2009. Found in <a class="subtitle" href="https://www.npr.org/2013/01/23/169922171/obamas-promise-to-close-guantanamo-prison-falls-short"> NPR article released in 2013.</a><br><br></p>
+            <p>The Obama administration attempts to close the facility and transfers many detainees, reducing the population significantly. However, political resistance blocks full closure, leaving the infrastructure and legal framework intact. Human-rights organizations warn that the persistence of Guantánamo normalizes indefinite detention. The site remains a global emblem of extrajudicial imprisonment.</p>
+        </div>
+
+        <div class="popup-overlay" data-popup-id="sixth"></div>
+        <div class="popup" data-popup-id="sixth">
+            <button class="close">&times</button>
+            <h2 style="text-align: center;">2025</h2>
+             <div class="popup-img">
+                <img src="https://d3i6fh83elv35t.cloudfront.net/static/2025/03/2025-03-01T194833Z_2124660233_RC2I4DAMRGPM_RTRMADP_3_USA-TRUMP-COURT-GUANTANAMO-1024x683.jpg" alt="Image of newly erected tents in Guantanamo Bay as it is used now.">
+            </div>
+            <p class="subtitle">Newly erected tents for holding migrants in Guantánamo Bay, as found in <a class="subtitle" href="https://www.pbs.org/newshour/politics/lawyers-sue-to-stop-trump-administration-from-sending-10-migrants-to-guantanamo-bay"> PBS article from March</a> covering lawyers' fight to sue Trump for the illegal and inhumane detainment of immigrants in Guantánamo.<br><br></p>
+            <p>For the first time in its history, Guantánamo is designated to receive large numbers of migrants apprehended from inside the U.S., not just those intercepted at sea. The administration expands the Migrant Operations Center to handle up to tens of thousands of people. Rights groups criticize the move as reviving Guantánamo’s legacy of secrecy and abuse—now applied to immigrants with no criminal charges. Advocates warn that detained migrants face limited legal access, potential repatriation pressures, and conditions reminiscent of earlier, discredited practices.</p>
+        </div>
+    </div>
+
+    <div id="next-page">
+        <a href="present.html" style="font-size: 30px;">To the Present</a>
+    </div>
+ </body>
+ </html>
