@@ -4,23 +4,31 @@
     <meta charset="UTF-8" />
     <title>Kelly's Homepage</title>
     <link rel="stylesheet" href="style.css" />
-    <!--Update with your name-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body>
+    <div class="header nav-link">
+      <a href="#projects">Projects</a>
+      <a href="#pecha-kucha">Pecha Kucha</a>
+      <a href="#exercises">Exercises</a>
+      <a href="#vibe-coding">Vibe Coding</a>
+    </div>
+  
     <div>
       <h1>kelly cao's creative web dev portfolio</h1>
       <!--Update with your name-->
       <p id="subtitle">
         A summary of my CSS, HTML, JS, and vibe coding work.
       </p>
-      <a class="arrowImg" href="#first-section"><img src= "https://cdn2.iconfinder.com/data/icons/navigation-1-2/64/6-512.png" ></a>
+      <a class="arrowImg" href="#projects"><img src= "https://cdn2.iconfinder.com/data/icons/navigation-1-2/64/6-512.png" ></a>
     </div>
 
-    <div id="first-section">
-      <h2 id="first-header">Projects</h2>
+    <h2 id="first-header">Projects</h2>
+    <div id="projects">
       <h3>Project 1: Interactive Audio & Visual with p5.js</h3>
-      <a href="https://editor.p5js.org/kelmcao/full/d9fLxy0st">Final</a>
       <p>
         I always find myself gravitating towards music for inspiration, even when ideating for this project. I wanted to create a musical garden or soundscape of sorts, which the user could display
         in the background while doing any sorts of activities, whether that be creative or otherwise. I wanted the mood to be relaxing, with a multitude of options and vibes to pick from. I focused a
@@ -36,16 +44,16 @@
         <a href ="https://sketchfab.com/3d-models/floating-island-05041dc9277748c68bb2ff8c7b6bc063">Model of island</a>
         <p>(i initially made my own model but I couldn't export texture properly as PNG, I ended up painting part of this texture as well).</p>
       </p>
+      <a href="https://editor.p5js.org/kelmcao/full/d9fLxy0st">Final</a>
       <div class ="embed-container">
         <iframe loading="lazy"
           src="https://editor.p5js.org/kelmcao/full/d9fLxy0st"
           title="Floating Island Audiovisual Meditation">
         </iframe>
       </div>
+
       <h3>Project 2: HyperNarrative</h3>
-      <a href="https://docs.google.com/document/d/1TIB2s8y8r4lJdsXNUi9V3DwmtrK7ddmZ2Q_0BxUsth8/edit?tab=t.0">Concept document</a><br>
-      <a href="https://kelmcao.github.io/iml300/bali-1965/">Final</a><br>
-      <p>
+        <p>
         For my Project 2, I wanted to focus on a significant historical event that I don't believe gets enough attention from US World History courses or in general throughout the western world.
         The Indonesian mass-killings of 1965 and 1966 had a longstanding and significant impact on Indonesian society. President Suharto, the main proponent of the movement called the “New Order”
         ruled as a dictator for 32 years, leading to more than 500,000 deaths, as well as indirectly to the East Timor genocide. I also wanted to touch on ethically contentious American globalization
@@ -56,15 +64,27 @@
         Given the serious nature of this topic, I wanted to ensure that the player could have choice in how they interacted with the environment, with two different endings, but also that there would be
         a distance maintained from reality, as this project is just scratching the surface of what happened in those years. I hope to bring more awareness to this genocide, which was recognized by an
         International Tribunal only in 2016, and has not yet been formally reviewed by the United Nations nor officially apologized for by the Indonesian government.<br><br>
-        AI Statement: I used Claude to assist with debugging/code review and some animations
+        AI Statement: I used Claude to assist with debugging/code review and some animations.
       </p>
+      <a href="https://docs.google.com/document/d/1TIB2s8y8r4lJdsXNUi9V3DwmtrK7ddmZ2Q_0BxUsth8/edit?tab=t.0">Concept document</a><br>
+      <a href="https://kelmcao.github.io/iml300/bali-1965/">Final</a><br>
       <div class="embed-container">
         <iframe src="https://kelmcao.github.io/iml300/bali-1965/" 
                 title="BALI 1965"
                 loading="lazy">
         </iframe>
       </div>
+
       <h3>Project 3: Networked Care</h3>
+      <p>
+        I wanted to create a project building upon the narrative work I had begun doing in Project 2, and combine it with a historical site that
+        still carries a lot of pertinence nowadays. I first learned about Guantánamo Bay last year in my surveillance class, and since then I've been deeply interested 
+        in not only expanding my own knowledge base about it, but also with educating others. I believe that this project helped me accomplish both of these goals, as I ended up
+        doing a lot of research on the black site, and I hope that this project proves to be both narratively entertaining and educational for many audiences. I think that
+        it's really our duty as people in this country to stay informed about the matters at hand that influence others in this nation, and so this interactive experience
+        is truly meant for anyone. This project responds to the issue of why Guantánamo Bay has remained open for so long, despite its very tumultuous history, and questions
+        the true intentions of how our current government is using the space.
+      </p>
       <a href="https://docs.google.com/document/d/1-xP0RdYL-b2trcidEWyf0S7VxLFRTiiPm810WWv2rew/edit?tab=t.0">Concept document</a><br>
       <div class="embed-container">
         <iframe src="https://embed.figma.com/site/E0a48U7Sh9GkQwCOkds1h1/Project3?node-id=0-1&embed-host=share" allowfullscreen
@@ -72,9 +92,16 @@
                 loading="lazy">
         </iframe>
       </div>
+      <a href="https://kelmcao.github.io/iml300/a-guantanamo-story/">Final</a><br>
+      <div class="embed-container">
+        <iframe src="https://kelmcao.github.io/iml300/a-guantanamo-story/"
+                title="A Guantánamo Story"
+                loading="lazy">
+        </iframe>
+      </div>
     </div>
 
-    <div>
+    <div id="pecha-kucha">
       <h2>Pecha Kucha Presentation on Molly Soda</h2>
       <p> Analysis of Molly Soda's artistry and craft for IML 300. 
       <div class="embed-container">
@@ -86,47 +113,68 @@
         </div>
     </div>
 
-    <div>
+    <div id="exercises">
       <h2>Exercises</h2>
       <ul>
-        <div class="p5-container">
+        <li><a data-p5="first" href="javascript:;">p5.js sketch 1</a></li>
+        <div data-p5-id="first" class="p5-container">
           <iframe loading="lazy"
-            src="https://editor.p5js.org/kelmcao/full/NFA1o9EEr">
-          </iframe>
+          src="https://editor.p5js.org/kelmcao/full/NFA1o9EEr">
+        </iframe>
+        </div>
+
+        <li><a data-p5="second" href="javascript:;">p5.js sketch 2</a></li>
+        <div data-p5-id="second" class="p5-container">
           <iframe loading="lazy"
             src="https://editor.p5js.org/kelmcao/full/TrME1c1vP">
           </iframe>
+        </div>
+
+        <li><a data-p5="third" href="javascript:;">p5.js sketch 3</a></li>
+        <div data-p5-id="third" class="p5-container">
           <iframe loading="lazy"
             src="https://editor.p5js.org/kelmcao/full/--vgbg314">
           </iframe>
+        </div>
+
+        <li><a data-p5="fourth" href="javascript:;">p5.js sketch 4</a></li>
+        <div data-p5-id="fourth" class="p5-container">
           <iframe loading="lazy"
             src="https://editor.p5js.org/kelmcao/full/giBvr2Gbd">
           </iframe>
+        </div>
+
+        <li><a data-p5="fifth" href="javascript:;">p5.js sketch 5</a></li>
+        <div data-p5-id="fifth" class="p5-container">
           <iframe loading="lazy"
             src="https://editor.p5js.org/kelmcao/full/GZ2pr40yA">
           </iframe>
+        </div>
+
+        <li><a data-p5="sixth" href="javascript:;">p5.js sketch 6</a></li>
+        <div data-p5-id="sixth" class="p5-container">
           <iframe loading="lazy"
             src="https://editor.p5js.org/kelmcao/full/HvPHXdJS_">
           </iframe>
         </div>
-        <li><a href="">p5.js sketch 1</a></li>
-        <li><a href="">p5.js sketch 2</a></li>
-        <li><a href="">p5.js sketch 3</a></li>
-        <li><a href="">p5.js sketch 4</a></li>
       </ul>
+      </div>
     </div>
 
     <!--add a h1 element called 'Thoughts' Below-->
-    <h2>Vibe Coding Assignments</h2>
-    <ul>
-      <li><a href="https://v0-victorian-joke-website.vercel.app/">Victorian joke website</a></li>
-      <li><a href="https://claude.ai/public/artifacts/eff256d5-a125-4dba-8385-6466a84538d3">Cozy project time tracker</a></li>
-      <li><a href="https://5acc4d59-5d78-497e-a05f-42fdf9e3e16e-00-1btao11l557c1.riker.replit.dev/">Women in CS History</a></li>
-      <li><a href="https://performative-authenticity.lovable.app/">authentically yours - Performative Authenticity blog</a></li>
-      <li><a href="https://glitch-truth-shaper.lovable.app/">HISTORICAL_ARCHIVE.exe - Corrupted Records</a></li>
-      <li><a href="https://v0-face-analysis-app-ten.vercel.app/">Face Analysis</a></li>
-      <li><a href="https://silent-stream-bot.lovable.app/">Ephemeral Chat - Privacy-First AI Chatbot</a></li>
-    </ul>
+    <div id="vibe-coding">
+      <h2>Vibe Coding Assignments</h2>
+      <ul>
+        <li><a href="https://v0-victorian-joke-website.vercel.app/">Victorian joke website</a></li>
+        <li><a href="https://claude.ai/public/artifacts/eff256d5-a125-4dba-8385-6466a84538d3">Cozy project time tracker</a></li>
+        <li><a href="https://5acc4d59-5d78-497e-a05f-42fdf9e3e16e-00-1btao11l557c1.riker.replit.dev/">Women in CS History</a></li>
+        <li><a href="https://performative-authenticity.lovable.app/">authentically yours - Performative Authenticity blog</a></li>
+        <li><a href="https://glitch-truth-shaper.lovable.app/">HISTORICAL_ARCHIVE.exe - Corrupted Records</a></li>
+        <li><a href="https://v0-face-analysis-app-ten.vercel.app/">Face Analysis</a></li>
+        <li><a href="https://silent-stream-bot.lovable.app/">Ephemeral Chat - Privacy-First AI Chatbot</a></li>
+      </ul>
+    </div>
+    
     <footer>Fall, 2025.</footer>
   </body>
 </html>
