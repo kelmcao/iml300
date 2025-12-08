@@ -7,7 +7,16 @@ html {
 
 body {
   margin: 20px 5%;
-  background-color: lavenderblush;
+  background: transparent;
+}
+
+#defaultCanvas0 {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: -1 !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 
 .header {
@@ -15,7 +24,8 @@ body {
   position: sticky;
   top: 0;
   padding: 30px 100px;
-  background: lavenderblush;
+  background: rgba(255, 240, 245, 0.5);
+  backdrop-filter: blur(10px);
   z-index: 1000;
   margin-left: -5%;
   margin-right: -5%;
