@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Collective Input — Archive</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <nav class="nav">
+      <span class="nav-left">Collective Input</span>
+      <span class="nav-center">Open Archive</span>
+      <span class="nav-right">Real-time //</span>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-eyebrow">Call for submissions — ongoing</div>
+      <div class="hero-title">
+        How are<br><span class="outline">you?</span>
+      </div>
+      <div class="hero-meta">
+        <span>Every response is recorded</span>
+        <span>Free admission</span>
+        <span>Open to all</span>
+      </div>
+    </section>
+
+    <section class="input-section">
+      <div class="input-label">Submit your response</div>
+      <form id="text-input-form" onsubmit="return false">
+        <input type="text" id="text-input-entry" placeholder="Say something true…" />
+        <input
+          type="submit"
+          id="text-input-submit"
+          onclick="submitlock()"
+          value="Share →"
+        />
+      </form>
+    </section>
+
+    <section class="archive-section">
+      <div class="archive-header">
+        <span>Archive Log</span>
+        <span>Responses // Live</span>
+      </div>
+      <div id="chat-container"></div>
+    </section>
+
+    <footer class="footer">
+      <span>Collective Input Studio</span>
+      <span id="footer-time"></span>
+      <span>Firebase Realtime DB</span>
+    </footer>
+
+    <script>
+      // Live clock in footer
+      function updateClock() {
+        const now = new Date();
+        document.getElementById('footer-time').textContent =
+          now.toLocaleTimeString('en-US', { hour12: false });
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+
+  </body>
+</html>
